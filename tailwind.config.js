@@ -80,13 +80,18 @@ module.exports = {
           '100%': {
             transform: 'translateX(-100%)'
           }
-        }
+        },
+        'spin-scale': {
+          '0%, 100%': { transform: 'scale(1) rotate(0deg)' },
+          '50%': { transform: 'scale(1.5) rotate(180deg)' },
+        },
       },
       animation: {
         'slide-from-left':
           'slide-from-left 0.3s cubic-bezier(0.82, 0.085, 0.395, 0.895)',
         'slide-to-left':
           'slide-to-left 0.25s cubic-bezier(0.82, 0.085, 0.395, 0.895)',
+        'spin-scale': 'spin-scale 3s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
       }
