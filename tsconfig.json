@@ -30,6 +30,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/ui/dialog.jsx", "components/ui/alert-dialog.jsx"  ],
+, "components/ui/dialog.jsx", "components/ui/alert-dialog.jsx", "components/ui/sheet.jsx"  ],
   "exclude": ["node_modules"]
 }
