@@ -72,10 +72,10 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
       />
 
       <Dialog open={previewTokenDialog} onOpenChange={setPreviewTokenDialog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Enter your OpenAI Key</DialogTitle>
-            <DialogDescription>
+        <DialogContent className="f">
+          <DialogHeader className="f">
+            <DialogTitle className="f">Enter your OpenAI Key</DialogTitle>
+            <DialogDescription className="f">
               If you have not obtained your OpenAI API key, you can do so by{' '}
               <a
                 href="https://platform.openai.com/signup/"

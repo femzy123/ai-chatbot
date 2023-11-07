@@ -111,10 +111,10 @@ export function SidebarActions({
         </Tooltip>
       </div>
       <Dialog open={shareDialogOpen} onOpenChange={setShareDialogOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Share link to chat</DialogTitle>
-            <DialogDescription>
+        <DialogContent className="f">
+          <DialogHeader className="f">
+            <DialogTitle className="f">Share link to chat</DialogTitle>
+            <DialogDescription className="f">
               Anyone with the URL will be able to view the shared chat.
             </DialogDescription>
           </DialogHeader>
@@ -172,21 +172,24 @@ export function SidebarActions({
         </DialogContent>
       </Dialog>
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-            <AlertDialogDescription>
+        <AlertDialogContent className="f">
+          <AlertDialogHeader className="f">
+            <AlertDialogTitle className="f">
+              Are you absolutely sure?
+            </AlertDialogTitle>
+            <AlertDialogDescription className="f">
               This will permanently delete your chat message and remove your
               data from our servers.
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel disabled={isRemovePending}>
+          <AlertDialogFooter className="f">
+            <AlertDialogCancel className="f" disabled={isRemovePending}>
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction
+              className="f"
               disabled={isRemovePending}
-              onClick={event => {
+              onClick={(event: { preventDefault: () => void }) => {
                 event.preventDefault()
                 startRemoveTransition(async () => {
                   const result = await removeChat({

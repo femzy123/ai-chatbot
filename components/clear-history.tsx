@@ -36,20 +36,25 @@ export function ClearHistory({ clearChats }: ClearHistoryProps) {
           Clear history
         </Button>
       </AlertDialogTrigger>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-          <AlertDialogDescription>
+      <AlertDialogContent className="f">
+        <AlertDialogHeader className="f">
+          <AlertDialogTitle className="f">
+            Are you absolutely sure?
+          </AlertDialogTitle>
+          <AlertDialogDescription className="f">
             This will permanently delete your chat history and remove your data
             from our servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel disabled={isPending}>Cancel</AlertDialogCancel>
+        <AlertDialogFooter className="f">
+          <AlertDialogCancel className="f" disabled={isPending}>
+            Cancel
+          </AlertDialogCancel>
           <AlertDialogAction
             disabled={isPending}
-            onClick={event => {
-              event.preventDefault()
+            className="f"
+            onClick={(e: { preventDefault: () => void }) => {
+              e.preventDefault()
               startTransition(async () => {
                 const result = await clearChats()
 
