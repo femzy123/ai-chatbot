@@ -28,14 +28,14 @@ interface ImageProps {
 }
 
 export default async function Image({ params }: ImageProps) {
-  const chat = await getSharedChat(params.id)
+  // const chat = await getSharedChat(params.id)
 
-  if (!chat || !chat?.sharePath) {
-    return null
-  }
+  // if (!chat || !chat?.sharePath) {
+  //   return null
+  // }
 
-  const textAlign = chat?.title?.length > 40 ? 'items-start' : 'items-center'
-
+  // const textAlign = chat?.title?.length > 40 ? 'items-start' : 'items-center'
+  const textAlign = "Hello".length > 40 ? 'items-start' : 'items-center'
   return new ImageResponse(
     (
       <div tw="flex w-full items-start h-full flex-col bg-[#09090b] text-white p-[80px]">
@@ -53,9 +53,10 @@ export default async function Image({ params }: ImageProps) {
               </svg>
             </div>
             <div tw="flex text-white font-bold text-4xl leading-normal ml-10">
-              {chat.title.length > 120
+              {/* {chat.title.length > 120
                 ? `${chat.title.slice(0, 120)}...`
-                : chat.title}
+                : chat.title} */}
+                Hello
             </div>
           </div>
           <div tw="flex w-full mt-14 items-start">

@@ -14,7 +14,8 @@ export async function SidebarList({ userId }: SidebarListProps) {
     <div className="flex-1 overflow-auto">
       {chats?.length ? (
         <div className="space-y-2 px-2">
-          {chats.map(
+          
+          {/* {chats.map(
             chat =>
               chat && (
                 <SidebarItem key={chat?.id} chat={chat}>
@@ -25,7 +26,7 @@ export async function SidebarList({ userId }: SidebarListProps) {
                   />
                 </SidebarItem>
               )
-          )}
+          )} */}
         </div>
       ) : (
         <div className="p-8 text-center">
