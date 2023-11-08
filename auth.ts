@@ -19,8 +19,16 @@ export const {
   providers: [
     Credentials({
       name: 'Credentials',
-      authorize: async (credentials: Partial<Record<string, unknown>>, request: Request) => {
-        const { id, email, name, picture } = credentials as { id: string, email: string, name: string, picture: string };
+      authorize: async (
+        credentials: Partial<Record<string, unknown>>,
+        request: Request
+      ) => {
+        const { id, email, name, picture } = credentials as {
+          id: string
+          email: string
+          name: string
+          picture: string
+        }
         if (id && email && name && picture) {
           const user = {
             id,
@@ -30,7 +38,7 @@ export const {
           }
           return user || null
         }
-        return null;
+        return null
       }
     }),
     GitHub
@@ -49,5 +57,6 @@ export const {
   },
   pages: {
     signIn: '/sign-in' // overrides the next-auth default signin page https://authjs.dev/guides/basics/pages
-  }
+  },
+  secret: process.env.NEXTAUTH_SECRET
 })
